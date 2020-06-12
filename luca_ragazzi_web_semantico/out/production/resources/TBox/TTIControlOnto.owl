@@ -1,0 +1,333 @@
+<rdf:RDF xmlns="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:control="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#">
+<owl:Ontology rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control">
+<rdfs:label>Control Ontology</rdfs:label>
+<owl:versionInfo>TTI Core: Control Ontology (v0.03)</owl:versionInfo>
+<dcterms:license>
+Copyright (C) 2015 Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan. This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).
+</dcterms:license>
+<dcterms:publisher>
+Toyota Technological Institute Smart Vehicle Research Project
+</dcterms:publisher>
+<dcterms:creator>
+Dr. Lihua Zhao, Postdoctoral researcher (TTI) Dr. Yutaka Sasaki, Director and Professor (TTI)
+</dcterms:creator>
+<owl:versionIRI rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTIControlOnto"/>
+</owl:Ontology>
+<!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#approachTo 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#approachTo"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#collisionWarningWith 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#collisionWarningWith"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#endLane 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#endLane"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#enterOf 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#enterOf">
+<rdfs:subPropertyOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#isNodeOf"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#exitOf 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#exitOf">
+<rdfs:subPropertyOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#isNodeOf"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#giveWay 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#giveWay"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#hasNode 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#hasNode"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#hasPathSegment 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#hasPathSegment"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#isNodeOf 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#isNodeOf"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#isPathSegmentOf 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#isPathSegmentOf">
+<owl:inverseOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#hasPathSegment"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#nextNode 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#nextNode"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#nextPathSegment 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#nextPathSegment">
+<owl:inverseOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#prevPathSegment"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#prevNode 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#prevNode">
+<owl:inverseOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#nextNode"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#prevPathSegment 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#prevPathSegment"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#startLane 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#startLane"/>
+<!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#nodePos 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#nodePos"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#pathSegmentID 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#pathSegmentID"/>
+<!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#BackwardCollisionWarning 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#BackwardCollisionWarning">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#CollisionWarning"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#CollisionWarning 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#CollisionWarning">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Warning"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#CurrentLaneSafeDist 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#CurrentLaneSafeDist">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#RoadCondition"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#EndLane 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#EndLane">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneSegment"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#EndNode 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#EndNode">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Node"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#ForwardCollisionWarning 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#ForwardCollisionWarning">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#CollisionWarning"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Go 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Go">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<rdfs:comment>1</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#GoBackward 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#GoBackward">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<rdfs:comment>5</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#GoForward 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#GoForward">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<rdfs:comment>4</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#GreenGo 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#GreenGo">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#TrafficSignalControl"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#IntersectionSegment 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#IntersectionSegment">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#PathSegment"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneChange 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneChange"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneDepartureWarning 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneDepartureWarning">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Warning"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneSegment 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneSegment">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#PathSegment"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LeftLaneChange 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LeftLaneChange">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneChange"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Node 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Node">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Path"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#OverSpeedWarning 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#OverSpeedWarning">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Warning"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Path 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Path"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#PathSegment 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#PathSegment">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Path"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#RedStop 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#RedStop">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#TrafficSignalControl"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#RightLaneChange 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#RightLaneChange">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneChange"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#RoadCondition 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#RoadCondition"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#SideCollisionWarning 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#SideCollisionWarning">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#CollisionWarning"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#StartLane 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#StartLane">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneSegment"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#StartNode 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#StartNode">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Node"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Stop 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Stop">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<rdfs:comment>0</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#ToLeft 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#ToLeft">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<rdfs:comment>2</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#ToRight 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#ToRight">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<rdfs:comment>3</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#TrafficSignalControl 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#TrafficSignalControl"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#TurnLeft 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#TurnLeft">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<rdfs:comment>6</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#TurnRight 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#TurnRight">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<rdfs:comment>7</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#WaitThenGo 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#WaitThenGo">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#DrivingAction"/>
+<rdfs:comment>8</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Warning 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Warning"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Yellow 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Yellow">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#TrafficSignalControl"/>
+</owl:Class>
+</rdf:RDF>
+<!--
+ Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net 
+
+.extraClassAspect {-webkit-transform: scaleX(1.35)!important;}.extraClassCrop {-webkit-transform: scale(1.35)!important;}
+-->

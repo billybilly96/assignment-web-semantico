@@ -1,0 +1,819 @@
+<rdf:RDF xmlns="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:map="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:swrlb="http://www.w3.org/2003/11/swrlb#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+<owl:Ontology rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map">
+<rdfs:label>Map Ontology</rdfs:label>
+<dcterms:license>
+Copyright (C) 2015 Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan. This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).
+</dcterms:license>
+<dcterms:publisher>
+Toyota Technological Institute Smart Vehicle Research Project
+</dcterms:publisher>
+<owl:versionInfo>TTI Core: Map Ontology (v0.03)</owl:versionInfo>
+<dcterms:creator>
+Dr. Lihua Zhao, Postdoctoral researcher Prof. Yutaka Sasaki, Director and Professor
+</dcterms:creator>
+<owl:versionIRI rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTIMapOnto"/>
+</owl:Ontology>
+<!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#byte 
+-->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#byte"/>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#deg  -->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#deg"/>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#kHz  -->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#kHz">
+<rdfs:label>kilohertz</rdfs:label>
+</rdfs:Datatype>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#kmh  -->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#kmh">
+<rdfs:comment>kilometer per hour</rdfs:comment>
+</rdfs:Datatype>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#mm  -->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#mm">
+<rdfs:label>millimeter</rdfs:label>
+</rdfs:Datatype>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#mm_pixel 
+-->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#mm_pixel"/>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#ms  -->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#ms">
+<rdfs:label>millisecond</rdfs:label>
+</rdfs:Datatype>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#pixel 
+-->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#pixel"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#pixl 
+-->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#pixl"/>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#rad  -->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#rad"/>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#sec  -->
+<rdfs:Datatype rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#sec">
+<rdfs:label>second</rdfs:label>
+</rdfs:Datatype>
+<!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#goStraightTo 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#goStraightTo"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasCar 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasCar">
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RouteOfTransportation"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasIntersection 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasIntersection">
+<rdfs:range rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Intersection"/>
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadType"/>
+<rdfs:subPropertyOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasJunction"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasJunction 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasJunction"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasLane 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasLane">
+<rdfs:range rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSegment"/>
+<owl:inverseOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isLaneOf"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasRoadSegment 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasRoadSegment"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isConnectedTo 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isConnectedTo">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isLaneOf 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isLaneOf">
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+<rdfs:range rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSegment"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isLeftOf 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isLeftOf"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isNextTo 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isNextTo">
+<rdfs:range rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isOn 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isOn"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isRightOf 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isRightOf">
+<owl:inverseOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isLeftOf"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isRoadSegmentOf 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isRoadSegmentOf">
+<owl:inverseOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#hasRoadSegment"/>
+</owl:ObjectProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#nearTo 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#nearTo"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#relatedTrafficLight 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#relatedTrafficLight"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#turnLeftTo 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#turnLeftTo"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#turnRightTo 
+-->
+<owl:ObjectProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#turnRightTo"/>
+<!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#address 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#address"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#adminArea 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#adminArea"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#allowLaneChange 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#allowLaneChange">
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#allowedDir 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#allowedDir">
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#alt  -->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#alt"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#angle 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#angle">
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TrafficSignal"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#boundCoordinate 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#boundCoordinate"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#boundPos 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#boundPos">
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#brand 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#brand"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#curve_id 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#curve_id"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#drivingDir 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#drivingDir">
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#enterPos 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#enterPos">
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#exitPos 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#exitPos">
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isEmpty 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#isEmpty">
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadPart"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#lat  -->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#lat"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#loc_x 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#loc_x">
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#loc_y 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#loc_y">
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#loc_z 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#loc_z">
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--  http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#lon  -->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#lon"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#name 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#name"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#opening_hours 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#opening_hours"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#operator 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#operator"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#orientation 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#orientation">
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#osm_node_id 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#osm_node_id"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#osm_ref 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#osm_ref"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#osm_way_id 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#osm_way_id"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#phone 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#phone"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#postcode 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#postcode"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#pubFacAdmin 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#pubFacAdmin"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#river_id 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#river_id">
+<rdfs:domain rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#River"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#speedMax 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#speedMax">
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</owl:DatatypeProperty>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#website 
+-->
+<owl:DatatypeProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#website"/>
+<!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Airport 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Airport">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Infrastructure"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Amenity 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Amenity">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Place"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#AuxiliaryRoadSign 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#AuxiliaryRoadSign">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSign"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Bank 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Bank">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Building"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Building 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Building">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Place"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#BusLane 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#BusLane">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#BusStation 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#BusStation">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Station"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#BusStop 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#BusStop">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#BusStation"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#College 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#College">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#EducationalInstitute"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Convenience 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Convenience">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Shop"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#CrosswalkRoadSegment 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#CrosswalkRoadSegment">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSegment"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#DirectionalRoadSign 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#DirectionalRoadSign">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSign"/>
+<rdfs:comment>Directional road sign</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#EducationalInstitute 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#EducationalInstitute">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Building"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#FastFood 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#FastFood">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Restaurant"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#FireStation 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#FireStation">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Building"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Forest 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Forest">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#NaturalPlace"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#GasStation 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#GasStation">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Infrastructure"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Highway 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Highway">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadType"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Hospital 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Hospital">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Building"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Infrastructure 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Infrastructure">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Place"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#InstructionRoadSign 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#InstructionRoadSign">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSign"/>
+<rdfs:comment xml:lang="en">Instruction road sign</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#InstructionSurfaceSign 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#InstructionSurfaceSign">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSurfaceMarking"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Intersection 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Intersection">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Junction"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Junction 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Junction">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadPart"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Kindergarten 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Kindergarten">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#EducationalInstitute"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lake 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lake">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#NaturalPlace"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadPart"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#LaneAdapter 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#LaneAdapter">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Junction"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Leisure 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Leisure">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Amenity"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#LocalRoad 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#LocalRoad">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OrdinaryRoad"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#MetroStation 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#MetroStation">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Station"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#MunicipalRoad 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#MunicipalRoad">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OrdinaryRoad"/>
+<rdfs:comment>MunicipalRoad</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#NationalRoad 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#NationalRoad">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OrdinaryRoad"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#NaturalPlace 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#NaturalPlace">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Place"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Object 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Object"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OneWayLane 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OneWayLane">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OrdinaryRoad 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OrdinaryRoad">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadType"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OtherSigns 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OtherSigns">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSurfaceMarking"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Park 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Park">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Leisure"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#ParkingPlace 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#ParkingPlace">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Amenity"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Pharmacy 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Pharmacy">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Shop"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Place 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Place"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#PoliceStation 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#PoliceStation">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Building"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#PostOffice 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#PostOffice">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Building"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#PrefecturalRoad 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#PrefecturalRoad">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OrdinaryRoad"/>
+<rdfs:comment>PrefecturalRoad</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#PrivateRoad 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#PrivateRoad">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#OrdinaryRoad"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RailwayStation 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RailwayStation">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Station"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RegulatoryRoadSign 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RegulatoryRoadSign">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSign"/>
+<rdfs:comment xml:lang="en">Regulatory sign</rdfs:comment>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RegulatorySurfaceSign 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RegulatorySurfaceSign">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSurfaceMarking"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Restaurant 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Restaurant">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Amenity"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#River 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#River">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#NaturalPlace"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadPart 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadPart">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RouteOfTransportation"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSegment 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSegment">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadPart"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSign 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSign">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TrafficSign"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSurfaceMarking 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSurfaceMarking">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TrafficSign"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadType 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadType">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RouteOfTransportation"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Roundabout 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Roundabout">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Junction"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RouteOfTransportation 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RouteOfTransportation"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#School 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#School">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#EducationalInstitute"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Shop 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Shop">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Amenity"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RouteOfTransportation"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit100 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit100">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit25 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit25">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit30 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit30">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit40 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit40">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit50 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit50">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit60 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit60">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit70 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit70">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit80 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit80">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SpeedLimit"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SportsCentre 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#SportsCentre">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Leisure"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Station 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Station">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Infrastructure"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Supermarket 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Supermarket">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Shop"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TollGate 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TollGate">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Infrastructure"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TrafficSign 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TrafficSign"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TrafficSignal 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TrafficSignal"/>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Turn 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Turn">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Junction"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TwoWayLane 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#TwoWayLane">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#University 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#University">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#EducationalInstitute"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#UtilityPole 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#UtilityPole">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Object"/>
+</owl:Class>
+<!--
+ http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#WarningRoadSign 
+-->
+<owl:Class rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#WarningRoadSign">
+<rdfs:subClassOf rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#RoadSign"/>
+<rdfs:comment xml:lang="en">Warning sign</rdfs:comment>
+</owl:Class>
+</rdf:RDF>
+<!--
+ Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net 
+
+.extraClassAspect {-webkit-transform: scaleX(1.35)!important;}.extraClassCrop {-webkit-transform: scale(1.35)!important;}
+-->

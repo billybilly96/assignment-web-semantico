@@ -1,0 +1,562 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Path#"
+     xml:base="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Path"
+     xmlns:Map="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:path="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Path"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:Control="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#">
+    <owl:Ontology rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Path">
+        <owl:versionIRI rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTIPathData"/>
+        <owl:imports rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTIMapOnto.owl"/>
+        <owl:imports rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl"/>
+        <owl:imports rdf:resource="https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.1/TTITempakuMapData.owl"/>
+        <owl:imports rdf:resource="https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.1/TTIControlOnto.owl"/>
+        <terms:creator>
+Dr. Lihua Zhao, Postdoctoral researcher (TTI) Dr. Yutaka Sasaki, Director and Professor (TTI)
+</terms:creator>
+        <terms:license>
+Copyright (C) 2015 Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan. This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).
+</terms:license>
+        <terms:publisher>
+Toyota Technological Institute Smart Vehicle Research Project
+</terms:publisher>
+        <rdfs:comment>
+Path around TTI campus for the experimental car. Started from the campus and return back to the campus.
+</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#endLane -->
+
+    <owl:AnnotationProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#endLane"/>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#nextPathSegment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#nextPathSegment"/>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#pathSegmentID -->
+
+    <owl:AnnotationProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#pathSegmentID"/>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#startLane -->
+
+    <owl:AnnotationProperty rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#startLane"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#IntersectionSegment -->
+
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#IntersectionSegment">
+        <owl:equivalentClass rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Intersection"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneSegment -->
+
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#LaneSegment">
+        <owl:equivalentClass rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Intersection -->
+
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Intersection"/>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane -->
+
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Map#Lane"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Path#Path1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Path#Path1">
+        <rdf:type rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#Path"/>
+        <Control:endLane rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TTICampRS1Lane2"/>
+        <Control:startLane rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TTICampRS1Lane1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS11Lane1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS11Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int11_12"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</Control:pathSegmentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS5Lane1 -->
+
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS5Lane1">
+        <rdf:type rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#EndLane"/>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int5_6"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">94</Control:pathSegmentID>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TTICampRS1Lane1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TTICampRS1Lane1">
+        <rdf:type rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Control#StartLane"/>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadInt2_3"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</Control:pathSegmentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TTICampRS1Lane2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TTICampRS1Lane2">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</Control:pathSegmentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt10_11">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS11Lane2"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">52</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt11_AT">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">54</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaTokai1Lane3"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt1_2">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">34</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS2Lane2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt2_3">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">36</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS3Lane2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt3_4">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS4Lane2"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">38</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt4_5">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS5Lane2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt5_6">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS6Lane2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt6_7">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS7Lane2"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">44</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt7_8">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS8Lane2"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">46</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt8_9">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS9Lane2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt9_10">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS10Lane2"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS10Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt10_11"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS11Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt11_AT"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">53</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS1Lane2">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">33</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt1_2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS2Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt2_3"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS3Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt3_4"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">37</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS4Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt4_5"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">39</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS5Lane2">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">41</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt5_6"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS6Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt6_7"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">43</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS7Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt7_8"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">45</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS8Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt8_9"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">47</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS9Lane2">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">49</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaInt9_10"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaTokai1Lane3">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">55</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaTokaiIntersection"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaTokaiIntersection">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">56</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiIntRSLane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int10_11">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS11Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int11_12">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS12Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int12_13">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS13Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int13_14">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS14Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int1_2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS2Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">87</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int2_3">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">89</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS3Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int3_4">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">91</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS4Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int4_5">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS5Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">93</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int5_6">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS6Lane1"/>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadRS1Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">95</Control:pathSegmentID>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int6_7">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS7Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int7_8">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS8Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int8_9">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS9Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int9_10">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS10Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS10Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int10_11"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS12Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int12_13"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS13Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int13_14"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS14Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HisakataHitotsuIntersection"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">22</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS1Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">86</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int1_2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS2Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">88</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int2_3"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS3Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int3_4"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS4Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">92</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int4_5"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS6Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int6_7"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS7Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int7_8"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS8Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int8_9"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS9Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int9_10"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthInt1_2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthRS2Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">81</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthInt2_3">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthRS3Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">83</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthRS1Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthInt1_2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthRS2Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthInt2_3"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">82</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthRS3Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">84</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HisakataIntHS3_H1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadInt1_2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadRS1Lane2"/>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadRS2Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</Control:pathSegmentID>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">97</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadInt2_3">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">99</Control:pathSegmentID>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadRS2Lane2"/>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TTICampRS1Lane2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadRS1Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadInt1_2"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">96</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadRS1Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2Int5_6"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadRS2Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">98</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadInt2_3"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadRS2Lane2">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2TTIRoadInt1_2"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HisakataHitotsuIntersection">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaInt0_1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HisakataIntHS3_H1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2RS1Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">85</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaAioiIntersection">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#AioiyamaRS1Lane2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaInt0_1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">24</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaRS1Lane3"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaInt1_2">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">26</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaRS2Lane3"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaInt2_3">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaRS3Lane3"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">28</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaInt3_4">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaRS4Lane3"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaRS1Lane3">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaInt1_2"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaRS2Lane3">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaInt2_3"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaRS3Lane3">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">29</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaInt3_4"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaRS4Lane3">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">31</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#HitotsuyamaAioiIntersection"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaiHisakataIntersection">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">79</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#Hisakata2SouthRS1Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt10_11">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">77</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS11Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt1_2">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">59</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS2Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt2_3">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">61</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS3Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt3_4">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS4Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">63</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt4_5">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS5Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">65</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt5_6">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">67</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS6Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt6_7">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS7Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">69</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt7_8">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS8Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">71</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt8_9">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS9Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">73</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt9_10">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS10Lane1"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">75</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiIntRSLane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">57</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS1Lane1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS10Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt10_11"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">76</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS11Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaiHisakataIntersection"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">78</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS1Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt1_2"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">58</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS2Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt2_3"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS3Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">62</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt3_4"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS4Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">64</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt4_5"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS5Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">66</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt5_6"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS6Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt6_7"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">68</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS7Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt7_8"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">70</Control:pathSegmentID>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS8Lane1">
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">72</Control:pathSegmentID>
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt8_9"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiRS9Lane1">
+        <Control:nextPathSegment rdf:resource="http://www.toyota-ti.ac.jp/Lab/Denshi/COIN/TempakuMap#TokaidoriAioiInt9_10"/>
+        <Control:pathSegmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">74</Control:pathSegmentID>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
