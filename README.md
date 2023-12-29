@@ -1,1 +1,1 @@
-# assignment-web-semantico
+Msc. project for the Semantic Web course.
